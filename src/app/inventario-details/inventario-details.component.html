@@ -1,0 +1,43 @@
+<mat-card class="container-details-inventario">
+
+  <form [formGroup]="ownerForm">
+    <mat-card-title>
+      <h4 class="title-Details">Edición de material</h4>
+    </mat-card-title>
+
+    <mat-card-content>
+      <mat-form-field class="mat-form-field">
+        <input required matInput type="text" placeholder="Name" [(ngModel)]="inventario.name" formControlName="name"
+          id="name" #name maxlength="100" (keypress)="keyPressName($event)">
+        <mat-hint align="end">{{name.value?.length || 0}}/100</mat-hint>
+        <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+        <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 100 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form-field">
+        <input required matInput type="text" placeholder="Weight" [(ngModel)]="inventario.weight"
+          formControlName="weight" id="weight" #weight maxlength="60" (keypress)="keyPressWeight($event)">
+        <mat-hint align="end">{{weight.value?.length || 0}}/60</mat-hint>
+        <mat-error *ngIf="hasError('weight', 'required')">Weight is required</mat-error>
+        <mat-error *ngIf="hasError('weight', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form-field">
+        <input required matInput type="text" placeholder="Symbol" [(ngModel)]="inventario.symbol"
+          formControlName="symbol" id="symbol" #symbol maxlength="60" (keypress)="keyPressSymbol($event)">
+        <mat-hint align="end">{{symbol.value?.length || 0}}/60</mat-hint>
+        <mat-error *ngIf="hasError('symbol', 'required')">Symbol is required</mat-error>
+        <mat-error *ngIf="hasError('symbol', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions class="action-buttons">
+      <button mat-button [disabled]="!ownerForm.valid" (click)="actualizar()">Actualizar</button>
+      <button mat-button (click)="cancelar()">Cancelar</button>
+    </mat-card-actions>
+    <mat-card-footer class="footer-text">
+      <h6>Los campos con * se consideran obligatorios</h6>
+    </mat-card-footer>
+
+  </form>
+</mat-card>

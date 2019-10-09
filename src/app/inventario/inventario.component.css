@@ -1,0 +1,31 @@
+table {
+    width: 90%;
+    margin-left:auto; 
+    margin-right:auto;
+margin-top: 5px;
+    }
+    .mat-form-field {
+        display: block;
+        width: 50%;
+        font-size: 14px;
+        margin-left: 45%;
+
+        }
+        .mat-paginator{
+            display: block;
+            width: 90%;
+            margin-left:auto; 
+            margin-right:auto;
+        }
+
+.mat-grid-list{
+    margin-top: 5px;
+    width: 90%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.btnCrear{
+    position: absolute;
+    left: 0;
+}

@@ -1,0 +1,26 @@
+.container-details-inventario{
+    width: 90%;
+        margin-left:auto; 
+        margin-right:auto;
+    margin-top: 20px;
+}
+
+.mat-form-field{
+    display: block;
+}
+.title-Details{
+    text-align: center;
+}
+.footer-text{
+    margin-right: 1px;
+    text-align: end;
+    opacity: .5;
+}
+.action-buttons {
+    text-align: end;
+}
+
+.action-buttons :hover {
+    background-color: darkgray;
+    box-shadow: 3px 3px 5px grey;
+}

@@ -1,0 +1,68 @@
+<!-- <mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav [mode]="mode.value">
+    <div >
+      <button  mat-button (click)="sidenav.toggle()"><i class="material-icons">
+          menu
+        </i></button>
+    </div>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+        
+          <mat-list role="list">
+              <mat-list-item role="listitem"><button mat-button ><a routerLink="/home">Home</a></button></mat-list-item>
+              <mat-list-item role="listitem"><button mat-button ><a routerLink="/inventario">Inventarios</a></button></mat-list-item>
+
+            </mat-list>
+      </mat-radio-group>
+  
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()"><i class="material-icons">
+        menu
+        </i></button>
+   
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Aplicacion Angular 7</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a class="aSideVar" mat-button routerLink="/home"> Home </a>
+        <a class="aSideVar" mat-button routerLink="/inventario"> Inventarios </a>
+  
+      </div>
+    </mat-toolbar-row>
+  
+    <!-- <mat-toolbar-row>
+        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+      </mat-toolbar-row> -->
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav [mode]="mode.value" >
+        <mat-nav-list>
+            <!-- <a mat-button routerLink="/home"> Home </a>
+            <a mat-button routerLink="/inventario"> Inventarios </a>  -->
+            <mat-list role="list">
+                <mat-list-item role="listitem"><a routerLink="/home">Home</a></mat-list-item>
+                <mat-list-item role="listitem"><a routerLink="/inventario">Inventarios</a></mat-list-item>
+    
+              </mat-list>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div style="height: 88vh;">
+    
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+
+  
+<!-- <router-outlet></router-outlet> -->
